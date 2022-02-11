@@ -12,8 +12,6 @@ import AccountModal from './AccountModal';
 import Spacer from '../Spacer';
 import { useAllTransactions } from 'src/state/transactions/hooks';
 import Loading from '../Loading';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSatelliteDish } from '@fortawesome/pro-regular-svg-icons';
 
 const AccountButton: React.FC = () => {
   const { account, activate, connector } = useWeb3React<Web3Provider>();
