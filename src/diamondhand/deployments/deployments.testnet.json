@@ -1,6 +1,6 @@
 {
   "MasterChef": {
-    "address": "0xcB6F356Fb0B7bb57daa6aC96B40C667455Bf35A2",
+    "address": "0x8Ae48D6c0EB34569169AFabbfA54A8149446Cf8E",
     "abi": [
       {
         "inputs": [
@@ -545,7 +545,7 @@
     ]
   },
   "TATU": {
-    "address": "0x8Ae48D6c0EB34569169AFabbfA54A8149446Cf8E",
+    "address": "0xcB6F356Fb0B7bb57daa6aC96B40C667455Bf35A2",
     "abi": [
       {
         "inputs": [
