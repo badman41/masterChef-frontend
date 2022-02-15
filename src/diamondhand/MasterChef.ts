@@ -49,7 +49,7 @@ export class MasterChef extends ContractWrapper {
   }
   
   async getPendingReward(poolId: BigNumber, userId: string) {
-    return await this.contract.safeCall.pendingTatu(poolId, userId);
+    return await this.contract.safeCall.pendingReward(poolId, userId);
   }
 
 }

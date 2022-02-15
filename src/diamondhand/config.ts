@@ -16,16 +16,18 @@ export type Configuration = {
   backendUrl?: string;
   backendDisabled?: boolean;
   farms?: Farm[];
+  vaults?: Vault[];
   abis: {
     SERC20?: any[];
     MasterChef?: any[];
+    VaultSLP?: any[];
   };
   addresses: {
     SERC20?: string;
     MasterChef?: string;
     Multicall?: string;
-  };
-  admins: string[];
+    VaultSLP?: string;
+  }
 };
 
 export type Market =
@@ -73,7 +75,7 @@ export type FarmingPool = {
 };
 
 export type Farm = {
-  masterChef: string;
+  masterChef?: string;
   profitSharing?: boolean;
   pools: FarmingPool[];
   rewardTokenSymbol?: string;
@@ -94,8 +96,8 @@ export type PoolConfig = {
   rewardToken: string;
   wantSymbol?: string;
   wantDecimals?: number;
-  addLiquidityUrl: string;
-  removeLiquidityUrl: string;
+  addLiquidityUrl?: string;
+  removeLiquidityUrl?: string;
   buyUrl?: string;
   isLp: boolean;
   stable?: boolean;
@@ -107,3 +109,19 @@ export type PoolConfig = {
   farmUrl?: string;
   partnerPoolAddress?: string;
 };
+
+export type Vault = {
+  token0: string;
+  token1: string;
+  poolId: number;
+  market?: Market;
+  marketSymbol?: MarketSymbol;
+  rewardToken?: string,
+  items: VaultItem[];
+};
+
+export type VaultItem = {
+  owner: string;
+  address: string;
+};
+

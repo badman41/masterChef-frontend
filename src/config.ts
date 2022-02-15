@@ -3,6 +3,7 @@ import deploymentLocal from './diamondhand/deployments/deployments.localhost.jso
 import deploymentTestnet from './diamondhand/deployments/deployments.testnet.json';
 import deploymentMainnet from './diamondhand/deployments/deployments.mainnet.json';
 import { AllFarms } from './farms';
+import { AllVaults } from './vaults';
 
 const configurations: { [env: string]: Configuration } = {
   development: {
@@ -18,23 +19,18 @@ const configurations: { [env: string]: Configuration } = {
     maxUnclaimedRefresh: 5,
     backendDisabled: false,
     farms: AllFarms,
+    vaults: AllVaults,
     abis: {
       SERC20: deploymentLocal.TATU.abi,
       MasterChef: deploymentLocal.MasterChef.abi,
+      VaultSLP: deploymentLocal.VaultSLP.abi,
     },
     addresses: {
       SERC20: deploymentLocal.TATU.address,
       MasterChef: deploymentLocal.MasterChef.address,
-      Multicall: deploymentLocal.Multicall.address,
-    },
-    admins: [
-      '0x03DbFDC27697b311B38C1934c38bD97905C46Ed0',
-      '0x62cA555de2D65f8e9D45a9B3d5C1b92aC1a64ecc',
-      '0xfDde60b51F8b16f2549850741015324Da346Db46',
-      '0x5AeBdE597752d689132Dc64D093ff4b09067e9e6',
-      '0xa3A502569BF1bfBF7b361964d61335a7530D39e8',
-      '0xD1d075DB389919a6985dDc9B32b5f3Ad6f0869cd',
-    ],
+      VaultSLP: deploymentLocal.VaultSLP.address,
+      Multicall: deploymentLocal.Multicall.address
+    }
   },
   testnet: {
     chainId: 42,
@@ -50,22 +46,18 @@ const configurations: { [env: string]: Configuration } = {
     backendUrl: 'https://api.diamondhand.fi',
     backendDisabled: false,
     farms: AllFarms,
+    vaults: AllVaults,
     abis: {
       SERC20: deploymentLocal.TATU.abi,
       MasterChef: deploymentLocal.MasterChef.abi,
+      VaultSLP: deploymentLocal.VaultSLP.abi,
     },
     addresses: {
       SERC20: deploymentLocal.TATU.address,
       MasterChef: deploymentLocal.MasterChef.address,
-    },
-    admins: [
-      '0x03DbFDC27697b311B38C1934c38bD97905C46Ed0',
-      '0x62cA555de2D65f8e9D45a9B3d5C1b92aC1a64ecc',
-      '0xfDde60b51F8b16f2549850741015324Da346Db46',
-      '0x5AeBdE597752d689132Dc64D093ff4b09067e9e6',
-      '0xa3A502569BF1bfBF7b361964d61335a7530D39e8',
-      '0xD1d075DB389919a6985dDc9B32b5f3Ad6f0869cd',
-    ],
+      VaultSLP: deploymentLocal.VaultSLP.address,
+      Multicall: deploymentLocal.Multicall.address
+    }
   },
   mainnet: {
     chainId: 137,
@@ -78,22 +70,18 @@ const configurations: { [env: string]: Configuration } = {
     gasLimitMultiplier: 1.1,
     maxBalanceRefresh: 1000000,
     farms: AllFarms,
+    vaults: AllVaults,
     abis: {
       SERC20: deploymentLocal.TATU.abi,
       MasterChef: deploymentLocal.MasterChef.abi,
+      VaultSLP: deploymentLocal.VaultSLP.abi,
     },
     addresses: {
       SERC20: deploymentLocal.TATU.address,
       MasterChef: deploymentLocal.MasterChef.address,
-    },
-    admins: [
-      '0x03DbFDC27697b311B38C1934c38bD97905C46Ed0',
-      '0x62cA555de2D65f8e9D45a9B3d5C1b92aC1a64ecc',
-      '0xfDde60b51F8b16f2549850741015324Da346Db46',
-      '0x5AeBdE597752d689132Dc64D093ff4b09067e9e6',
-      '0xa3A502569BF1bfBF7b361964d61335a7530D39e8',
-      '0xD1d075DB389919a6985dDc9B32b5f3Ad6f0869cd',
-    ],
+      VaultSLP: deploymentLocal.VaultSLP.address,
+      Multicall: deploymentLocal.Multicall.address
+    }
   },
 };
 
