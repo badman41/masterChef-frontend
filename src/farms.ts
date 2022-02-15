@@ -68,7 +68,7 @@ export const AllFarms: Farm[] = [
         wantSymbol: "SERC20/MATIC"
       },
       {
-        id: 0,
+        id: 1,
         token0: 'SERC20',
         token1: 'USDC',
         rewardToken: 'SERC20',
