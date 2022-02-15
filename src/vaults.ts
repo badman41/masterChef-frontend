@@ -3,7 +3,7 @@ import { Vault } from './diamondhand/config';
 export const AllVaults: Vault[] = [
   {
     token0: 'SERC20',
-    token1: 'ETH',
+    token1: 'MATIC',
     poolId: 0,
     market: 'SushiSwap',
     marketSymbol: 'SUSHISWAP',
@@ -15,7 +15,7 @@ export const AllVaults: Vault[] = [
       },
       {
         owner: '0x46bEC8B77d117fDC69b0681c3697a81B43585C8b',
-        address: '0x09A5011b4D96118665C23cb590E8D5f3AbE95911'
+        address: '0xE9a762827Ff8E42356F6212ACAC010985C75aa45'
       },
     ],
   },
