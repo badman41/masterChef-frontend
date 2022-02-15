@@ -72,15 +72,15 @@ const configurations: { [env: string]: Configuration } = {
     farms: AllFarms,
     vaults: AllVaults,
     abis: {
-      SERC20: deploymentLocal.TATU.abi,
-      MasterChef: deploymentLocal.MasterChef.abi,
-      VaultSLP: deploymentLocal.VaultSLP.abi,
+      SERC20: deploymentMainnet.TATU.abi,
+      MasterChef: deploymentMainnet.MasterChef.abi,
+      VaultSLP: deploymentMainnet.VaultSLP.abi,
     },
     addresses: {
-      SERC20: deploymentLocal.TATU.address,
-      MasterChef: deploymentLocal.MasterChef.address,
-      VaultSLP: deploymentLocal.VaultSLP.address,
-      Multicall: deploymentLocal.Multicall.address
+      SERC20: deploymentMainnet.TATU.address,
+      MasterChef: deploymentMainnet.MasterChef.address,
+      VaultSLP: deploymentMainnet.VaultSLP.address,
+      Multicall: deploymentMainnet.Multicall.address
     }
   },
 };
