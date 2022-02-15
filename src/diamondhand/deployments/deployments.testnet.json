@@ -1,6 +1,6 @@
 {
   "MasterChef": {
-    "address": "0x8Ae48D6c0EB34569169AFabbfA54A8149446Cf8E",
+    "address": "0xfA57AAf2b8d53b02d99603FbeffA75DcF043dcF5",
     "abi": [
       {
         "inputs": [
@@ -993,7 +993,7 @@
     ]
   },
   "VaultSLP": {
-    "address": "0x5FE470ffBD0f54E5b4816fc7d3A0fc78CaC32683",
+    "address": "0xE9a762827Ff8E42356F6212ACAC010985C75aa45",
     "abi": [
       {
         "inputs": [

@@ -15,7 +15,7 @@ export const AllVaults: Vault[] = [
       },
       {
         owner: '0x46bEC8B77d117fDC69b0681c3697a81B43585C8b',
-        address: '0x5FE470ffBD0f54E5b4816fc7d3A0fc78CaC32683'
+        address: '0xE9a762827Ff8E42356F6212ACAC010985C75aa45'
       },
     ],
   },
