@@ -52,9 +52,7 @@ export class DiamondHand {
   unlockWallet(provider: JsonRpcProvider, account: string) {
     this.signer = provider.getSigner(account);
     this.myAccount = account;
-    const vaultAddress = this.vaults[0].items.find(
-      (x: VaultItem) => x.owner == account,
-    )?.address;
+    const vaultAddress = this.vaults[0]?.address;
     this.vaultSLP = new VaultSLP(this.vaultSLPAbi, vaultAddress, provider);
     this.reconnect();
   }

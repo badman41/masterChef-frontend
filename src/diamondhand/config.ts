@@ -117,6 +117,7 @@ export type Vault = {
   market?: Market;
   marketSymbol?: MarketSymbol;
   rewardToken?: string,
+  address: string,
   items: VaultItem[];
 };
 

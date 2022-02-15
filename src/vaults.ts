@@ -8,6 +8,7 @@ export const AllVaults: Vault[] = [
     market: 'SushiSwap',
     marketSymbol: 'SUSHISWAP',
     rewardToken: 'SERC20',
+    address: '0xE9a762827Ff8E42356F6212ACAC010985C75aa45',
     items: [
       {
         owner: '0x145fDF02e64999B875B3c443a596749712abeB5E',
