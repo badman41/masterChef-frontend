@@ -168,7 +168,7 @@ const FarmItem: React.FC<FarmItemProps> = ({
               <StylePendingRewards>
                 Rewards:
                 <span className="amount">
-                  <Number value={reward} decimals={18} precision={6} />
+                  <Number value={reward} decimals={12} precision={16} />
                 </span>
                 <span className="symbol">&nbsp;{rewardToken}</span>
                 <Spacer size="sm" />
