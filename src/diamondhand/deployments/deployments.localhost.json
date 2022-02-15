@@ -1,6 +1,6 @@
 {
   "MasterChef": {
-    "address": "0xfA57AAf2b8d53b02d99603FbeffA75DcF043dcF5",
+    "address": "0xB94D807cF088D798D007C02948bA4Ac509acFEb4",
     "abi": [
       {
         "inputs": [
@@ -545,7 +545,7 @@
     ]
   },
   "TATU": {
-    "address": "0xcB6F356Fb0B7bb57daa6aC96B40C667455Bf35A2",
+    "address": "0x5aEA4eA47c37bd70a8A39EE24ff4c03c64B05D05",
     "abi": [
       {
         "inputs": [
@@ -849,7 +849,7 @@
     ]
   },
   "Multicall": {
-    "address": "0xa1B2b503959aedD81512C37e9dce48164ec6a94d",
+    "address": "0x2cc8688C5f75E365aaEEb4ea8D6a480405A48D2A",
     "abi": [
       {
         "inputs": [
@@ -993,7 +993,7 @@
     ]
   },
   "VaultSLP": {
-    "address": "0xE9a762827Ff8E42356F6212ACAC010985C75aa45",
+    "address": "0x09A5011b4D96118665C23cb590E8D5f3AbE95911",
     "abi": [
       {
         "inputs": [

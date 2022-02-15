@@ -16,8 +16,8 @@ export const LoadingLogo: React.FC<LoadingLogoProps> = ({ marginTop, width }) =>
 
 const LoadingContainer = styled.div<{ width?: string; marginTop?: string }>`
   text-align: center;
-  margin-top: ${({ marginTop }) => marginTop || '50px'};
+  margin-top: ${({ marginTop }) => marginTop || '10px'};
   img {
-    width: ${({ width }) => width || '36px'};
+    width: ${({ width }) => width || '10px'};
   }
 `;

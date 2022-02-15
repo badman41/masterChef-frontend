@@ -51,34 +51,21 @@ export const AllFarms: Farm[] = [
   {
     rewardTokenSymbol: 'SERC20',
     rewardTokenDecimals: 6,
-    rewardTokenAddress: '0xcB6F356Fb0B7bb57daa6aC96B40C667455Bf35A2',
+    rewardTokenAddress: '0x5aEA4eA47c37bd70a8A39EE24ff4c03c64B05D05',
     profitSharing: true,
     pools: [
       {
         id: 0,
         token0: 'SERC20',
-        token1: 'MATIC',
+        token1: 'ETH',
         rewardToken: 'SERC20',
         isLp: true,
         stable: false,
         profitSharing: false,
         market: 'SushiSwap',
         marketSymbol: 'SUSHISWAP',
-        partnerPoolAddress: '0x0fd2594cce912b28206576f512453726e9bdfe2f',
-        wantSymbol: "SERC20/MATIC"
-      },
-      {
-        id: 1,
-        token0: 'SERC20',
-        token1: 'USDC',
-        rewardToken: 'SERC20',
-        isLp: true,
-        stable: false,
-        profitSharing: false,
-        market: 'SushiSwap',
-        marketSymbol: 'SUSHISWAP',
-        partnerPoolAddress: '0x431c541f69a5d4b5bc9469dd84a31ca26988fd85',
-        wantSymbol: "SERC20/USDC"
+        partnerPoolAddress: '0x258ab90202110dE2Ce3BD0B1e6Bf8228f1042f9C',
+        wantSymbol: "SERC20/ETH"
       },
     ],
   },

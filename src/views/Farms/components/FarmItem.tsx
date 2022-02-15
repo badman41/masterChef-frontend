@@ -14,7 +14,6 @@ import useMyReward from 'src/hooks/useMyReward';
 import Number from 'src/components/Number';
 import useDiamondHand from 'src/hooks/useDiamondHand';
 import useHandleTransactionReceipt from 'src/hooks/useHandleTransactionReceipt';
-import useMyDeposited from 'src/hooks/useMyDeposited';
 
 export type FarmItemProps = {
   index: number;
@@ -75,7 +74,6 @@ const FarmItem: React.FC<FarmItemProps> = ({
   );
 
   const reward = useMyReward(BigNumber.from(poolConfig.id));
-  const deposited = useMyDeposited(BigNumber.from(poolConfig.id));
   const handleTransactionReceipt = useHandleTransactionReceipt();
   const dh = useDiamondHand();
   const claim = useCallback(async () => {
@@ -136,11 +134,6 @@ const FarmItem: React.FC<FarmItemProps> = ({
               )}
             </StyledHeaderSubTitle>
           </StyledHeaderStatus>
-        </StyledHeaderCell>
-        <StyledHeaderCell paddingLeft={10} hiddenXs={true}>
-          <StyledHeaderDataValue highlight={true}>
-          <Number value={deposited} decimals={18} precision={6} />
-          </StyledHeaderDataValue>
         </StyledHeaderCell>
       </StyledHeader>
       {expanded && !farmUrl ? (
@@ -343,7 +336,7 @@ const StyledContent = styled.div`
 
 const StyledHeader = styled.div`
   display: grid;
-  grid-template-columns: 5fr 5fr 3fr 4fr 3fr 1fr;
+  grid-template-columns: 5fr 5fr;
   grid-gap: 10px;
   text-decoration: none;
   flex: 1;

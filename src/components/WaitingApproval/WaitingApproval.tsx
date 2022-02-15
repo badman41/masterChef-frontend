@@ -18,7 +18,7 @@ const WaitingApproval: React.FC<WaitingApprovalProps> = ({ message, onDismiss })
       </ModalHeader>
       <StyledModalContent>
         <StyledLoaderContainer>
-          <Gif src="/loading-dragon.gif" />
+          <Gif src="/loading.gif" />
         </StyledLoaderContainer>
         <StyledMessage>{message}</StyledMessage>
         <StyledHelper>Confirm this transaction in your wallet</StyledHelper>
@@ -34,6 +34,7 @@ const StyledModalContent = styled.div`
   grid-template-rows: 1fr;
   align-items: center;
   padding: 40px 10px 30px 10px;
+  background-color: #ffffff;
 `;
 
 export const StyledLoaderContainer = styled.div`
@@ -46,7 +47,6 @@ const StyledMessage = styled.div`
   text-align: center;
   color: ${(props) => props.theme.color.grey[750]};
   font-weight: 600;
-  margin-top: 40px;
 `;
 
 const StyledHelper = styled.div`

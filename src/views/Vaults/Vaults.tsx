@@ -33,7 +33,6 @@ const Vaults: React.FC = () => {
           <StyledFarmGridHeader>
             <StyledFarmGridHeaderCell>Asset</StyledFarmGridHeaderCell>
             <StyledFarmGridHeaderCell>Rewards</StyledFarmGridHeaderCell>
-            <StyledFarmGridHeaderCell>Deposited</StyledFarmGridHeaderCell>
           </StyledFarmGridHeader>
           <StyledFarmGridBody>
             {vaultInfo && <VaultItem
@@ -54,7 +53,7 @@ const StyledFarmGrid = styled.div``;
 
 const StyledFarmGridHeader = styled.div`
   display: grid;
-  grid-template-columns: 5fr 5fr 3fr 4fr 3fr 1fr;
+  grid-template-columns: 5fr 5fr;
   grid-gap: 10px;
   @media (max-width: 768px) {
     display: none;

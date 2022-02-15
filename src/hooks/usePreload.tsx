@@ -31,7 +31,7 @@ export const withPreload = (Component: React.FC, time: number): React.FC => {
     if (!loaded) {
       return (
         <div className="initial-loading">
-          <img src="/loading-dragon.gif" />
+          <img src="/loading.gif" />
         </div>
       );
     }

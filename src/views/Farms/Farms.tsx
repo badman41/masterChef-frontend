@@ -9,6 +9,8 @@ import Select from 'react-select';
 import { FarmingPool, PoolConfig } from 'src/diamondhand/config';
 import { createAddLiquidityLink, createRemoveLiquidityLink } from 'src/farms';
 import { flatten } from 'src/utils/objects';
+import { StyledLoaderContainer } from 'src/components/WaitingApproval/WaitingApproval';
+import { Gif } from 'src/components/Gif/Gif';
 
 const Farms: React.FC = () => {
   const config = useConfiguration();
@@ -49,30 +51,36 @@ const Farms: React.FC = () => {
   return (
     <Page>
       <StyledBody>
-        {!allPools.length && (
+        {!config?.farms && (
+          <StyledLoaderContainer>
+            <Gif src="/loading.gif" />
+          </StyledLoaderContainer>
+        )}
+        {config?.farms && !allPools.length && (
           <StyledNoFarm>
             <img src={noFarm} />
             No farm
           </StyledNoFarm>
         )}
-        <StyledFarmGrid>
-          <StyledFarmGridHeader>
-            <StyledFarmGridHeaderCell>Asset</StyledFarmGridHeaderCell>
-            <StyledFarmGridHeaderCell>Rewards</StyledFarmGridHeaderCell>
-            <StyledFarmGridHeaderCell>Deposited</StyledFarmGridHeaderCell>
-          </StyledFarmGridHeader>
-          <StyledFarmGridBody>
-            {(allPools || []).map((p: FarmingPool, index: number) => (
-              <FarmItem
-                key={index}
-                index={index}
-                expanded={expanded === index}
-                toggle={toggle}
-                poolConfig={getPoolConfig(p, p.masterChef)}
-              />
-            ))}
-          </StyledFarmGridBody>
-        </StyledFarmGrid>
+        {config?.farms && (
+          <StyledFarmGrid>
+            <StyledFarmGridHeader>
+              <StyledFarmGridHeaderCell>Asset</StyledFarmGridHeaderCell>
+              <StyledFarmGridHeaderCell>Rewards</StyledFarmGridHeaderCell>
+            </StyledFarmGridHeader>
+            <StyledFarmGridBody>
+              {(allPools || []).map((p: FarmingPool, index: number) => (
+                <FarmItem
+                  key={index}
+                  index={index}
+                  expanded={expanded === index}
+                  toggle={toggle}
+                  poolConfig={getPoolConfig(p, p.masterChef)}
+                />
+              ))}
+            </StyledFarmGridBody>
+          </StyledFarmGrid>
+        )}
         <Spacer size="lg" />
       </StyledBody>
     </Page>
@@ -83,7 +91,7 @@ const StyledFarmGrid = styled.div``;
 
 const StyledFarmGridHeader = styled.div`
   display: grid;
-  grid-template-columns: 5fr 5fr 3fr 4fr 3fr 1fr;
+  grid-template-columns: 5fr 5fr;
   grid-gap: 10px;
   @media (max-width: 768px) {
     display: none;

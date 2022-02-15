@@ -12,7 +12,6 @@ import StakeLPVaultComponent from './StakeLPVaultComponent';
 import UnstakeLPVaultComponent from './UnstakeLPVaultComponent';
 import useMyVaultReward from 'src/hooks/useMyVaultReward';
 import { Vault } from 'src/diamondhand/config';
-import useMyVaultDeposited from 'src/hooks/useMyVaultDeposited';
 
 export type VaultItemProps = {
   index: number;
@@ -53,7 +52,6 @@ const VaultItem: React.FC<VaultItemProps> = ({
   );
 
   const reward = useMyVaultReward();
-  const deposited = useMyVaultDeposited();
   const handleTransactionReceipt = useHandleTransactionReceipt();
   const claim = useCallback(async () => {
     const tx = await handleTransactionReceipt(
@@ -124,11 +122,6 @@ const VaultItem: React.FC<VaultItemProps> = ({
               )}
             </StyledHeaderSubTitle>
           </StyledHeaderStatus>
-        </StyledHeaderCell>
-        <StyledHeaderCell paddingLeft={10} hiddenXs={true}>
-          <StyledHeaderDataValue highlight={true}>
-            <Number value={deposited} decimals={18} precision={16} />
-          </StyledHeaderDataValue>
         </StyledHeaderCell>
       </StyledHeader>
       {expanded  ? (
@@ -298,7 +291,7 @@ const StyledContent = styled.div`
 
 const StyledHeader = styled.div`
   display: grid;
-  grid-template-columns: 5fr 5fr 3fr 4fr 3fr 1fr;
+  grid-template-columns: 5fr 5fr;
   grid-gap: 10px;
   text-decoration: none;
   flex: 1;
